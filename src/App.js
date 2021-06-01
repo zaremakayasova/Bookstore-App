@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 
 import BooksList from './components/Books-List/books-list';
+import PopUpButton from './components/Button-PopUp/button-popup';
+import PopUpPage from './components/PopUp-Page/popUp-page';
 
 const App = () => {
 
@@ -9,7 +11,8 @@ const App = () => {
   return (
     <div className="App">
       <h1>Bookstore App</h1>
-      <button className='add-button' type='button'>Add New Book</button>
+      <PopUpButton />
+      <PopUpPage />
       <BooksList />
     </div>
   );

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 const BooksList = ({ books }) => (
     <div className='books-list'>
         {books.books.map(({ id, ...otherBooksProps }) => (
-            <Book key={id} {...otherBooksProps} />
+            <Book key={id} id={id} {...otherBooksProps} />
         ))}
     </div>
 );
