@@ -5,7 +5,8 @@ import { addId } from './books.utils';
 
 const INITIAL_STATE = {
   books: BOOKS_DATA,
-  hidden: true
+  hidden: true,
+  expanded: false
 };
 
 const booksReducer = (state = INITIAL_STATE, action) => {
@@ -15,6 +16,11 @@ const booksReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         hidden: !state.hidden
+      };
+    case BooksActionTypes.TOGGLE_POPUP_EXPANDED:
+      return {
+        ...state,
+        expanded: !state.expanded
       };
     case BooksActionTypes.ADD_NEW_BOOK:
       return {
@@ -26,6 +32,11 @@ const booksReducer = (state = INITIAL_STATE, action) => {
         ...state,
         books: state.books.filter(book => book.id !== action.payload.id)
       };
+    // case BooksActionTypes.EDIT_BOOK:
+    //   return {
+    //     ...state,
+    //     books: 
+    //   };
     default:
       return state;
   }

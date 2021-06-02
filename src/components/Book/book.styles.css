@@ -1,0 +1,44 @@
+.book {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 100px;
+    background-color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.book:hover {
+    background-color: #eeeff4;
+}
+
+.book-title {
+    font-size: 22px;
+    font-weight: bold;
+    width: 30%;
+}
+
+.book-items {
+    width: 17.5%;
+    font-family: "Montserrat", sans-serif;
+    color: #696969;
+}
+
+.book-delete-button {
+    border: none;
+    background-color: #c70000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 4px;
+    width: 17.5%;
+    height: 33px;
+}
+
+.book-delete-button:hover {
+    background-color: darkred;
+}

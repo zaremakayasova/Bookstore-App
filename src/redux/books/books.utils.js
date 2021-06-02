@@ -1,5 +1,6 @@
-export const addId = ({ name, author, price, category }) => {
-    let id = name;
-    return { name, author, price, category, id }
+export const addId = ({ title, author, price, category }) => {
+    const id = title;
+    return { title, author, price, category, id }
 };
+
 
