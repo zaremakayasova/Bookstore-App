@@ -5,8 +5,7 @@ import { addId } from './books.utils';
 
 const INITIAL_STATE = {
   books: BOOKS_DATA,
-  hidden: true,
-  expanded: false
+  hidden: true
 };
 
 const booksReducer = (state = INITIAL_STATE, action) => {
@@ -16,11 +15,6 @@ const booksReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         hidden: !state.hidden
-      };
-    case BooksActionTypes.TOGGLE_POPUP_EXPANDED:
-      return {
-        ...state,
-        expanded: !state.expanded
       };
     case BooksActionTypes.ADD_NEW_BOOK:
       return {

@@ -28,17 +28,10 @@
     color: #696969;
 }
 
-.book-delete-button {
-    border: none;
-    background-color: #c70000;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    color: #fff;
-    border-radius: 4px;
-    width: 17.5%;
-    height: 33px;
+.book-buttons {
+    display: flex;
+    flex-direction: column;
 }
 
-.book-delete-button:hover {
-    background-color: darkred;
-}
+
+

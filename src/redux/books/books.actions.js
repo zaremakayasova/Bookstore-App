@@ -4,10 +4,6 @@ export const toggleHidden = () => ({
     type: BooksActionTypes.TOGGLE_POPUP_HIDDEN
 });
 
-export const toggleExpanded = () => ({
-    type: BooksActionTypes.TOGGLE_POPUP_EXPANDED
-});
-
 export const addNewBook = ({ title, author, price, category }) => ({
     type: BooksActionTypes.ADD_NEW_BOOK,
     payload: { title, author, price, category }
