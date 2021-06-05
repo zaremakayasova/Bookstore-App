@@ -1,11 +1,10 @@
 import { BooksActionTypes } from './books.types';
 import BOOKS_DATA from './books.data';
 
-import { addId } from './books.utils';
-
 const INITIAL_STATE = {
   books: BOOKS_DATA,
-  hidden: true
+  hidden: true,
+  filterCategory: 'All'
 };
 
 const booksReducer = (state = INITIAL_STATE, action) => {
@@ -19,7 +18,7 @@ const booksReducer = (state = INITIAL_STATE, action) => {
     case BooksActionTypes.ADD_NEW_BOOK:
       return {
         ...state,
-        books: [...state.books, addId(action.payload)]
+        books: [...state.books, action.payload]
       };
     case BooksActionTypes.DELETE_BOOK:
       return {
@@ -29,8 +28,18 @@ const booksReducer = (state = INITIAL_STATE, action) => {
     // case BooksActionTypes.EDIT_BOOK:
     //   return {
     //     ...state,
-    //     books: 
+    //     books: [...state.books, editBook(state.books,action.payload)]
     //   };
+    case BooksActionTypes.CHANGE_FILTER:
+      return {
+        ...state,
+        filterCategory: action.payload
+      };
+      case BooksActionTypes.SET_INITIAL_CATEGORY:
+        return {
+          ...state,
+          filterCategory: 'All'
+        };
     default:
       return state;
   }

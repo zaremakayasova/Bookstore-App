@@ -1,0 +1,9 @@
+.book-input {
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid lightgray;
+    width: 80%;
+    font-size: 15px;
+    padding: 15px;
+    outline: none;
+    background-color: #fff;
+}

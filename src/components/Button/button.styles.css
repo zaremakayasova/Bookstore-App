@@ -8,6 +8,7 @@
     font-family: "Montserrat", sans-serif;
     width: 95%;
     height: 33px;
+    transition: all 0.3s ease-out;
 }
 
 .btn:hover {
@@ -24,11 +25,13 @@
     background-color: #fff;
     width: 9%;
     font-weight: bold;
-    position:absolute;
+    position: absolute;
     right: 110px;
     top: 40px;
 }
 
 .add-btn:hover {
-    background-color: #eeeff4;
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #fff;
 }
