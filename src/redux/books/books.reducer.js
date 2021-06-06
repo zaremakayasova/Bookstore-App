@@ -3,17 +3,17 @@ import BOOKS_DATA from './books.data';
 
 const INITIAL_STATE = {
   books: BOOKS_DATA,
-  hidden: true,
+  hiddenAddPopUp: true,
   filterCategory: 'All'
 };
 
 const booksReducer = (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
-    case BooksActionTypes.TOGGLE_POPUP_HIDDEN:
+    case BooksActionTypes.TOGGLE_ADD_POPUP:
       return {
         ...state,
-        hidden: !state.hidden
+        hiddenAddPopUp: !state.hiddenAddPopUp
       };
     case BooksActionTypes.ADD_NEW_BOOK:
       return {
@@ -35,11 +35,11 @@ const booksReducer = (state = INITIAL_STATE, action) => {
         ...state,
         filterCategory: action.payload
       };
-      case BooksActionTypes.SET_INITIAL_CATEGORY:
-        return {
-          ...state,
-          filterCategory: 'All'
-        };
+    case BooksActionTypes.SET_INITIAL_CATEGORY:
+      return {
+        ...state,
+        filterCategory: 'All'
+      };
     default:
       return state;
   }

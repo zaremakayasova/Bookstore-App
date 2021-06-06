@@ -1,7 +1,7 @@
 import { BooksActionTypes } from './books.types';
 
-export const toggleHidden = () => ({
-    type: BooksActionTypes.TOGGLE_POPUP_HIDDEN
+export const toggleAddPopUp = () => ({
+    type: BooksActionTypes.TOGGLE_ADD_POPUP
 });
 
 export const addNewBook = ({ id, title, author, price, category }) => ({
@@ -9,9 +9,9 @@ export const addNewBook = ({ id, title, author, price, category }) => ({
     payload: { id, title, author, price, category }
 });
 
-export const editBook = ({ title, author, price, category }) => ({
+export const editBook = (oldBook, editedBook) => ({
     type: BooksActionTypes.EDIT_BOOK,
-    payload: { title, author, price, category }
+    payload: [oldBook, editedBook]
 });
 
 export const deleteBook = book => ({

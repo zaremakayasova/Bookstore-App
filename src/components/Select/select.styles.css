@@ -8,3 +8,7 @@
     height: 30px;
     cursor: pointer;
 }
+
+.select-category:hover {
+    background-color: #eeeff4;
+}

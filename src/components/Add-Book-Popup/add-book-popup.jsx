@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import './add-book-popup.styles.css';
 
 import { v4 as uuidv4 } from 'uuid';
+import { IoIosClose } from "react-icons/io";
 
 import { connect } from 'react-redux';
 
-import { toggleHidden, addNewBook, setInitialCategory } from '../../redux/books/books.actions';
-
+import { toggleAddPopUp, addNewBook, setInitialCategory } from '../../redux/books/books.actions';
 
 import Form from '../Form/form';
 import Input from '../Input/input';
 import Select from '../Select/select';
 
-const AddBookPopup = ({ hidden, toggleHidden, addNewBook, setInitialCategory }) => {
+const AddBookPopup = ({ hiddenAddPopUp, toggleAddPopUp, addNewBook, setInitialCategory }) => {
     const categories = ['Select Book Category', 'Horror', 'History', 'Biography', 'Sci-Fi', 'Adventure', 'Kids', 'Other'];
     const [bookDetails, setBookDetails] = useState({
         title: '',
@@ -37,16 +37,21 @@ const AddBookPopup = ({ hidden, toggleHidden, addNewBook, setInitialCategory }) 
         addNewBook(book);
         setBookDetails({ title: '', author: '', price: '', category: '' });
         setInitialCategory();
-        toggleHidden();
+        toggleAddPopUp();
+    };
+
+    const handleCloseClick = () => {
+        toggleAddPopUp();
     };
 
     return (
         <div className='add-book-popup'>
             {
-                hidden ? null :
+                hiddenAddPopUp ? null :
                     (
                         <Form handleSubmit={handleSubmit}>
                             <Input placeholder='Enter a book title' name='title' value={title} handleChange={handleChange} />
+                            <IoIosClose size='1.5em' onClick={handleCloseClick} />
                             <Input placeholder='Enter a book author' name='author' value={author} handleChange={handleChange} />
                             <Input placeholder='Enter a book price' name='price' value={price} handleChange={handleChange} />
                             <Select categories={categories} handleChange={handleChange} required />
@@ -59,12 +64,12 @@ const AddBookPopup = ({ hidden, toggleHidden, addNewBook, setInitialCategory }) 
 };
 
 const mapStateToProps = state => ({
-    hidden: state.books.hidden
+    hiddenAddPopUp: state.books.hiddenAddPopUp
 });
 
 const mapDispatchToProps = dispatch => ({
     addNewBook: bookDetails => dispatch(addNewBook(bookDetails)),
-    toggleHidden: () => dispatch(toggleHidden()),
+    toggleAddPopUp: () => dispatch(toggleAddPopUp()),
     setInitialCategory: () => dispatch(setInitialCategory())
 });
 
