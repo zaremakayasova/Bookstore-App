@@ -7,17 +7,19 @@
     justify-content: space-around;
     align-items: center;
     border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    margin: 0px auto 20px auto;
+    border-radius: 5px;
+    margin: 15px auto 15px auto;
     padding: 30px;
+    text-transform: uppercase;
 }
 
 .book:hover {
-    background-color: #eeeff4;
+    background-color: #ededed;
 }
 
 .book-title {
-    font-size: 22px;
+    font-size: 20px;
+    color: #3d3d3d;
     font-weight: bold;
     width: 30%;
 }
@@ -33,6 +35,17 @@
     flex-direction: column;
 }
 
-
-
-
+@media (max-width: 1200px) {
+    .book {
+        flex-direction: column;
+        align-items: unset;
+        width: 280px;
+        height: 300px;
+    }
+    .book-title {
+        width: 90%;
+    }
+    .book-items {
+        width: 80%;
+    }
+}

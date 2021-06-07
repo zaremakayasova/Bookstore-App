@@ -4,19 +4,19 @@ export const toggleAddPopUp = () => ({
     type: BooksActionTypes.TOGGLE_ADD_POPUP
 });
 
-export const addNewBook = ({ id, title, author, price, category }) => ({
+export const addNewBook = newBook => ({
     type: BooksActionTypes.ADD_NEW_BOOK,
-    payload: { id, title, author, price, category }
+    payload: newBook
 });
 
-export const editBook = (oldBook, editedBook) => ({
+export const editBook = editedBook => ({
     type: BooksActionTypes.EDIT_BOOK,
-    payload: [oldBook, editedBook]
+    payload: editedBook
 });
 
-export const deleteBook = book => ({
+export const deleteBook = bookToDelete => ({
     type: BooksActionTypes.DELETE_BOOK,
-    payload: book
+    payload: bookToDelete
 });
 
 export const changeFilter = category => ({
@@ -27,3 +27,5 @@ export const changeFilter = category => ({
 export const setInitialCategory = () => ({
     type: BooksActionTypes.SET_INITIAL_CATEGORY,
 });
+
+

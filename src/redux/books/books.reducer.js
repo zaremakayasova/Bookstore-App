@@ -1,6 +1,8 @@
 import { BooksActionTypes } from './books.types';
 import BOOKS_DATA from './books.data';
 
+import { editBook } from './books.utils';
+
 const INITIAL_STATE = {
   books: BOOKS_DATA,
   hiddenAddPopUp: true,
@@ -25,11 +27,11 @@ const booksReducer = (state = INITIAL_STATE, action) => {
         ...state,
         books: state.books.filter(book => book.id !== action.payload.id)
       };
-    // case BooksActionTypes.EDIT_BOOK:
-    //   return {
-    //     ...state,
-    //     books: [...state.books, editBook(state.books,action.payload)]
-    //   };
+    case BooksActionTypes.EDIT_BOOK:
+      return {
+        ...state,
+        books: editBook(state.books, action.payload)
+      };
     case BooksActionTypes.CHANGE_FILTER:
       return {
         ...state,

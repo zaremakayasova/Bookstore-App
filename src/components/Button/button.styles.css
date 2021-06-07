@@ -2,7 +2,7 @@
     margin: 5px;
     font-size: 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #ff8c00;
     color: #fff;
     font-family: "Montserrat", sans-serif;
@@ -17,21 +17,38 @@
 }
 
 .delete-btn {
-    background-color: #ff0000;
+    background-color: #dc143c;
 }
 
 .add-btn {
-    color: #ff0000;
+    color: #dc143c;
     background-color: #fff;
     width: 9%;
     font-weight: bold;
     position: absolute;
     right: 110px;
-    top: 40px;
+    top: 60px;
 }
 
 .add-btn:hover {
-    background-color: #ff0000;
+    background-color: #dc143c;
     color: #fff;
     border: 2px solid #fff;
 }
+
+@media (max-width: 1200px) {
+    .add-btn {
+        position: unset;
+        right: 110px;
+        top: 60px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        font-size: 13px;
+        width: 35%;
+        height: 35px;
+        transition: all 0.3s ease-out;
+    }
+}
+

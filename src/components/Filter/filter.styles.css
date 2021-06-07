@@ -1,5 +1,13 @@
 .filter {
     font-family: "Montserrat", sans-serif;
+    width: 15%;
+    position: absolute;
+    right: 60px;
+    top: 15px;
 }
 
-
+@media (max-width: 1200px) {
+    .filter {
+        position: unset;
+    }
+}

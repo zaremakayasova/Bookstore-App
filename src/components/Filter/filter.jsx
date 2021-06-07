@@ -7,7 +7,7 @@ import { changeFilter } from '../../redux/books/books.actions';
 import Select from '../Select/select';
 
 const Filter = ({ changeFilter }) => {
-    const categories = ['All', 'Horror', 'History', 'Biography', 'Sci-Fi', 'Adventure', 'Kids'];
+    const categories = ['All', 'horror', 'history', 'biography', 'sci-fi', 'adventure', 'kids', 'other'];
 
     const handleChange = e => {
         const { value } = e.target;
@@ -15,7 +15,6 @@ const Filter = ({ changeFilter }) => {
     };
     return (
         <div className='filter'>
-            <label className='filter-label' htmlFor='category'>Filter By Category:</label>
             <Select name='category' categories={categories} handleChange={handleChange} />
         </div>
     )

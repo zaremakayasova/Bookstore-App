@@ -16,7 +16,7 @@ const App = ({ toggleAddPopUp }) => (
   <div className='App'>
     <div className='header'>
       <h1>
-        <ImBooks color='white' size='1.3em' />
+        <ImBooks color='#fff' size='1.3em' />
           Bookstore App
           </h1>
       <Button handleClick={toggleAddPopUp} addBtn>Add New Book</Button>
