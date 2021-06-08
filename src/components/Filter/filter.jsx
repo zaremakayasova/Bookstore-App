@@ -15,7 +15,7 @@ const Filter = ({ changeFilter }) => {
     };
     return (
         <div className='filter'>
-            <Select name='category' categories={categories} handleChange={handleChange} />
+            <Select name='category' categories={categories} handleChange={handleChange} filterSelect />
         </div>
     )
 };

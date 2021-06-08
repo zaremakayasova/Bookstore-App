@@ -1,5 +1,4 @@
 import React from 'react';
-import './books-list.styles.css';
 
 import Book from '../Book/book';
 

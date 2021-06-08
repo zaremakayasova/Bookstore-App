@@ -14,3 +14,17 @@
     background-color: #ededed;
 }
 
+@media (max-width: 1200px) {
+    .select-category {
+        width: 80%;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    .filter-select {
+        margin-top: 60px;
+        margin-left: -100px;
+        width: 90px;
+        height: 35px;
+    }
+}
