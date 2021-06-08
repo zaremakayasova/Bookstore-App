@@ -4,7 +4,7 @@ A Bookstore App built with React, using Redux and React Hooks for state manageme
 
 ## Live Demo
 
-The application is hosted on netlify and can be accessed at the following web address: []()
+The application is hosted on Github Pages and can be accessed at the following web address: [https://zaremakayasova.github.io/Bookstore-App/](https://zaremakayasova.github.io/Bookstore-App/)
 
 ## Screenshots
 
